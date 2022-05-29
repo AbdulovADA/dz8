@@ -22,8 +22,7 @@ public class Radio {
         int newCurrentWave;
         if (currentWave != 9) {
             newCurrentWave = currentWave + 1;
-        }
-        else {
+        } else {
             newCurrentWave = 0;
         }
         setCurrentWave(newCurrentWave);
@@ -33,8 +32,7 @@ public class Radio {
         int newCurrentWave;
         if (currentWave != 0) {
             newCurrentWave = currentWave - 1;
-        }
-        else {
+        } else {
             newCurrentWave = 9;
         }
         setCurrentWave(newCurrentWave);
