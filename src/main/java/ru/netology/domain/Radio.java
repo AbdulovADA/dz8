@@ -19,27 +19,25 @@ public class Radio {
     }
 
     public void next() {
-        if (currentWave == 9) {
-            int newCurrentWave = 0;
-            setCurrentWave(newCurrentWave);
-            return;
+        int newCurrentWave;
+        if (currentWave != 9) {
+            newCurrentWave = currentWave + 1;
         }
-        if (currentWave < 9) {
-            int newCurrentWave = currentWave + 1;
-            setCurrentWave(newCurrentWave);
+        else {
+            newCurrentWave = 0;
         }
+        setCurrentWave(newCurrentWave);
     }
 
     public void prev() {
-        if (currentWave == 0) {
-            int newCurrentWave = 9;
-            setCurrentWave(newCurrentWave);
-            return;
+        int newCurrentWave;
+        if (currentWave != 0) {
+            newCurrentWave = currentWave - 1;
         }
-        if (currentWave > 0) {
-            int newCurrentWave = currentWave - 1;
-            setCurrentWave(newCurrentWave);
+        else {
+            newCurrentWave = 9;
         }
+        setCurrentWave(newCurrentWave);
     }
 
     public int currentVolume;
